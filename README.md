@@ -1,6 +1,9 @@
 Angular Single Page Application Seed
 ====================================
 
+Based on [MarcCloud/angularify-seed](https://github.com/MarcCloud/angularify-seed)
+
+
 History
 -------
 
