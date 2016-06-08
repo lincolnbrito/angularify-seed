@@ -104,4 +104,4 @@ var gulp = require('gulp'),
 
     gulp.task('analyze',['lint-js','report-complexity','unit-test']);
 
-    gulp.task('default',['html','css','js','unit-test','serve','watch']);
+    gulp.task('default',['html','css','bundle-vendors','js','unit-test','serve','watch']);

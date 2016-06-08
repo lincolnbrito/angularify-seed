@@ -6,7 +6,8 @@
         .module('spa',['ui.router',
                       'ui.bootstrap',
                       require('./landing').name,
-                      require('./todos').name])
+                      require('./todos').name,
+                      require('./notes').name])
         .config(['$stateProvider',
                  '$urlRouterProvider',
                  require('./routes')]);

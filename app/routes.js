@@ -16,6 +16,11 @@ function Routes($stateProvider,$urlRouterProvider){
             url: '/todos',
             templateUrl: 'views/todos.html',
             controller:'TodosController as todos'
+        })
+        .state('notes', {
+            url: '/notes',
+            templateUrl: 'views/notes-list.html',
+            controller:'NotesListController as notes'
         });
 }
 
