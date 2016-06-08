@@ -9,17 +9,17 @@ function Routes($stateProvider,$urlRouterProvider){
     $stateProvider
         .state('index', {
             url: '/',
-            templateUrl: 'views/landing.html',
+            templateUrl: 'views/landing/landing.html',
             controller:'LandingController as landing'
         })
         .state('todos', {
             url: '/todos',
-            templateUrl: 'views/todos.html',
+            templateUrl: 'views/todos/todos.html',
             controller:'TodosController as todos'
         })
         .state('notes', {
             url: '/notes',
-            templateUrl: 'views/notes-view-list.html',
+            templateUrl: 'views/notes/controllers/notes-view-list.html',
             controller:'NotesControllerList as notes'
         });
 }

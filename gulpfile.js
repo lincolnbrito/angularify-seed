@@ -29,7 +29,7 @@ var gulp = require('gulp'),
     gulp.task('html',['index'],function(){
        return gulp.src(['./app/**/*.jade','!./app/index.jade'])
            .pipe(jade({pretty:true}))
-           .pipe(flatten())
+           //.pipe(flatten())
            .pipe(gulp.dest('./dist/views'))
            .pipe(connect.reload());
     });
