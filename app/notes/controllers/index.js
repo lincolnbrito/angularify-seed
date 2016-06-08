@@ -1,7 +1,7 @@
 //Notes Controllers
 var controllers = angular.module('spa.notes.controllers',[]);
-require('./create-controller');
-require('./edit-controller');
-require('./list-controller');
+require('./notes-controller-create');
+require('./notes-controller-edit');
+require('./notes-controller-list');
 
 module.exports = controllers;

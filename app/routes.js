@@ -19,8 +19,8 @@ function Routes($stateProvider,$urlRouterProvider){
         })
         .state('notes', {
             url: '/notes',
-            templateUrl: 'views/notes-list.html',
-            controller:'NotesListController as notes'
+            templateUrl: 'views/notes-view-list.html',
+            controller:'NotesControllerList as notes'
         });
 }
 
