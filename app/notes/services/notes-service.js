@@ -1,7 +1,7 @@
 'use strict';
 module.exports = angular.module('spa.notes.services').service('NotesService',["NotesUtilsService",function(NotesUtilsService){
 	var self = this;
-	
+
 	var items = [
         {id: 1, label: "Item 0"},
         {id: 2, label: "Item 1"},

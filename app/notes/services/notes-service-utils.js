@@ -6,5 +6,4 @@ module.exports = angular.module('spa.notes.services').service('NotesUtilsService
         console.log('Converting...',item);
     };
 
-    
 }]);
