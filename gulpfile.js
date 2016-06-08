@@ -36,7 +36,10 @@ var gulp = require('gulp'),
 
     gulp.task('css',function(){
        return gulp.src(['./app/app.scss','./app/**/*.scss'])
-           .pipe(sass({errLogToConsole: true}))
+           .pipe(sass({
+               errLogToConsole: true,
+               outputStyle: 'compressed'
+           }))
            .pipe(concat('spa.min.css'))
            .pipe(gulp.dest('./dist/styles'))           
            .pipe(connect.reload());
