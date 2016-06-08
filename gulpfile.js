@@ -16,6 +16,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     plato = require('gulp-plato');
     concat = require('gulp-concat');
+    htmlmin = require('gulp-htmlmin');
 
     /**
      * Gulp Task to process only the index file.
@@ -30,6 +31,7 @@ var gulp = require('gulp'),
        return gulp.src(['./app/**/*.jade','!./app/index.jade'])
            .pipe(jade({pretty:true}))
            //.pipe(flatten())
+           .pipe(htmlmin({collapseWhitespace: true}))
            .pipe(gulp.dest('./dist/views'))
            .pipe(connect.reload());
     });
