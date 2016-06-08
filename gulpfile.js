@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     istanbul = require('gulp-istanbul'),
     jshint = require('gulp-jshint'),
     plato = require('gulp-plato');
-
+    concat = require('gulp-concat');
 
     /**
      * Gulp Task to process only the index file.
@@ -35,10 +35,10 @@ var gulp = require('gulp'),
     });
 
     gulp.task('css',function(){
-       return gulp.src('./app/**/*.scss')
-           .pipe(sass())
-           .pipe(rename('spa.min.css'))
-           .pipe(gulp.dest('./dist/styles'))
+       return gulp.src(['./app/app.scss','./app/**/*.scss'])
+           .pipe(sass({errLogToConsole: true}))
+           .pipe(concat('spa.min.css'))
+           .pipe(gulp.dest('./dist/styles'))           
            .pipe(connect.reload());
     });
 
