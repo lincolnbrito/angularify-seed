@@ -17,6 +17,7 @@ var gulp = require('gulp'),
     plato = require('gulp-plato');
     concat = require('gulp-concat');
     htmlmin = require('gulp-htmlmin');
+    templateCache = require('gulp-angular-templatecache');
 
     /**
      * Gulp Task to process only the index file.
@@ -32,6 +33,14 @@ var gulp = require('gulp'),
            .pipe(jade({pretty:true}))
            //.pipe(flatten())
            .pipe(htmlmin({collapseWhitespace: true}))
+           .pipe(templateCache({
+               standalone: true,
+               module:'template-cache',
+               root: 'views/',
+               transformUrl: function(url) {
+                   return url.replace(/\.tpl\.html$/, '.html')
+               }
+           }))
            .pipe(gulp.dest('./dist/views'))
            .pipe(connect.reload());
     });

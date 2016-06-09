@@ -3,7 +3,8 @@
  */
 'use strict';
     angular
-        .module('spa',['ui.router',
+        .module('spa',['template-cache',
+                      'ui.router',
                       'ui.bootstrap',
                       require('./landing').name,
                       require('./todos').name,
